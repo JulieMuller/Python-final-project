@@ -34,6 +34,11 @@ def register():
     forms = RegistrationForm()
     return render_template('register.html', title = 'Register', form=forms)
 
+@app.route("/index", methods=['GET', 'POST'])
+def index():
+    forms = RegistrationForm()
+    return render_template('login2.html', title = 'index', form=forms)
+
 @app.route("/login", methods=['GET', 'POST'])
 def login():
     forms = LoginForm()
