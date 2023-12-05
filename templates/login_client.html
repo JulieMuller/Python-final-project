@@ -17,15 +17,15 @@
 <body>
 
     <div class="main-container">
+
         <div class="form-container">
-
-
 
             <div class="form-body">
                 <a href="/home">
                     <center><img src="static\img\dorsetwallet.png" alt="centered image" height="128" width="195"> </center>
                 </a>
-                <h2 class="title">Log in with</h2>
+                
+                <h2 class="title">Client log in</h2>
                 
                 <!-- 
                 <div class="social-login">
@@ -35,24 +35,24 @@
                     </ul>
                 </div>            -->
 
-                <div class="_or"></div>
+                <div class="_or">or</div>
 
                 <form action="" class="the-form">
 
-                    <label for="username">Username</label>
-                    {{ form.username }}
+                    <label for="First Name">First Name</label>
+                    {{ form.first_name }}
 
-                    <label for="email">Email</label>
-                    {{ form.mail }}
+                    <label for="Last Name">Last Name</label>
+                    {{ form.last_name }}
 
-                    <label for="password">Password</label>
-                    {{ form.password }}
+                    <label for="Account Number">Account Number</label>
+                    {{ form.account_number }}
 
-                    <label for="confirm_password">Confirm password</label>
-                    {{ form.confirm_password }}
+                    <label for="Pin">Pin</label>
+                    {{ form.pin }}
 
-                    <!-- <input type="password" name="password" id="password" placeholder="Enter your password"> -->
-                    <!-- <input type="submit" value="Log In"> -->
+                    <span for="Remember Me">{{ form.remember }} Remember me</span>
+                    
 
                     {{ form.submit }}
 
@@ -62,8 +62,10 @@
 
             <div class="form-footer">
                 <div>
-                    <span>Already have an account?</span> <a href="/login_client">Log in</a>
+                    <span>Don't have an account?</span> <a href="/register">Register</a><br>
+                    <span>Bank employee ?</span> <a href="/login_employee">Log in</a>
                 </div>
+
             </div><!-- FORM FOOTER -->
 
         </div><!-- FORM CONTAINER -->

@@ -8,9 +8,9 @@
 body {
   margin: 0;
   padding: 0;
-  color: #204A9B;
+  color: #222222;
   background-color: #f2f2f0;
-  background-color: #204A9B;
+  background-color: #321e85;
   background-image: url("../images/cover.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -48,10 +48,10 @@ a:hover {
 }
 
 .form-body {
-  background-color: #F0F2F4;
+  background-color: #4a304d;
   overflow: hidden;
   padding: 50px;
-  color: #000000;
+  color: #ffffff;
   border-radius: 3px;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
@@ -93,7 +93,7 @@ a:hover {
 }
 
 .social-login ul li a {
-  background-color: #204A9B;
+  background-color: #321e85; 
   border-radius: 3px;
   display: flex;
   justify-content: center;
@@ -101,7 +101,7 @@ a:hover {
   width: 100%;
   height: 100%;
   padding: 15px;
-  color: #F0F2F4;
+  color: #e6e6e6;
   font-weight: bold;
   text-decoration: none;
   transition: background-color .3s;
@@ -118,7 +118,7 @@ a:hover {
 }
 
 .social-login ul li a:hover {
-  background-color: #ffb37b;
+  background-color: #fff199;
   color: #0e090e;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
@@ -127,11 +127,19 @@ li.google {
   margin-right: 10px;
 }
 
+li.google a::before {
+  background-image: url("../images/google.png");
+}
+
 li.fb {
   margin-left: 10px;
 }
 
-/*
+li.fb a::before {
+  margin: 0;
+  background-image: url("../images/fb.png");
+}
+
 @media only screen and (max-width: 400px) {
   .social-login ul {
     flex-direction: column;
@@ -143,9 +151,9 @@ li.fb {
   }
 
   li.google {
-    margin-bottom: 0px;
+    margin-bottom: 10px;
   }
-} */
+}
 
 ._or {
   text-align: center;
@@ -161,7 +169,7 @@ li.fb {
 
 .the-form label {
   margin-bottom: 5px; 
-  color: #000000;
+  color: #e6e6e6;
   font-weight: bold;
 }
 
@@ -171,12 +179,12 @@ li.fb {
 .the-form [type="text"] {
   padding: 15px;
   font-size: 16px;
-  background: rgba(89, 133, 221, 0.2);
+  background: rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 3px;
   margin-bottom: 15px;
   transition: background .3s;
-  color: #000000;
+  color: #e6e6e6;
 }
 
 .the-form [type="email"]::placeholder,
@@ -188,9 +196,9 @@ li.fb {
 
 .the-form [type="email"]:hover,
 .the-form [type="text"]:hover,
-.the-form [type="number"]:hover,
+.the-form [type="number"]:hoover,
 .the-form [type="password"]:hover {
-  background: rgba(89, 133, 221, 0.1);
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .the-form [type="email"]:focus,
@@ -211,14 +219,14 @@ li.fb {
 }
 
 .the-form [type="submit"] {
-  background: #204A9B;
+  background: #ffb37b;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 18px;
   font-size: 20px;
   border-radius: 3px;
   cursor: pointer;
   margin-top: 20px;
-  color: rgb(255, 255, 255);
+  color: black;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
@@ -248,17 +256,10 @@ li.fb {
   color: #ffb37b;
 }
 
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
 .company-logo {
   max-width: 100%;
-  width: 250px;
-  height: 250px;
+  width: 150px;
+  height: 150px;
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;

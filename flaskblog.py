@@ -1,5 +1,5 @@
 from flask import Flask, render_template, url_for
-from forms import RegistrationForm, LoginForm
+from forms import RegistrationForm, LoginForm_client, LoginForm_employee
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = '9c383dc88513191312f9fa9317ce3100'
@@ -34,15 +34,15 @@ def register():
     forms = RegistrationForm()
     return render_template('register.html', title = 'Register', form=forms)
 
-@app.route("/index", methods=['GET', 'POST'])
-def index():
-    forms = RegistrationForm()
-    return render_template('login2.html', title = 'index', form=forms)
+@app.route("/login_client", methods=['GET', 'POST'])
+def login_client():
+    forms = LoginForm_client()
+    return render_template('login_client.html', title = 'Login client', form=forms)
 
-@app.route("/login", methods=['GET', 'POST'])
-def login():
-    forms = LoginForm()
-    return render_template('login.html', title = 'Login', form=forms)
+@app.route("/login_employee", methods=['GET', 'POST'])
+def login_employee():
+    forms = LoginForm_employee()
+    return render_template('login_employee.html', title = 'Login employee', form=forms)
 
 if __name__ == '__main__':
   app.run(debug=True)

@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-{% from "macros/fields.html" import render_text_field %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Login Page Template</title>
     <link href="https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./static/assets/css/style-with-prefix.css">
+    <link rel="stylesheet" href="./static/assets/css/style_employee.css">
     <style>
         .srouce{
             text-align: center;
@@ -18,38 +17,31 @@
 <body>
 
     <div class="main-container">
+
         <div class="form-container">
 
-
-
             <div class="form-body">
-                <h1 class="title">Dorset Wallet</h1>
-                <h2 class="title">Log in with</h2>
+
+                <a href="/home">
+                    <center><img src="static\img\dorsetwallet.png" alt="centered image" height="128" width="195"> </center>
+                </a>   
+
+                <h2 class="title">Employee log in</h2>
+                
+                <!-- 
                 <div class="social-login">
                     <ul>
                         <li class="google"><a href="#">Google</a></li>
                         <li class="fb"><a href="#">Facebook</a></li>
                     </ul>
-                </div><!-- SOCIAL LOGIN -->
+                </div>            -->
 
                 <div class="_or">or</div>
 
                 <form action="" class="the-form">
 
-                    <label for="username">Username</label>
-                    {{ form.username }}
-
-                    <label for="email">Email</label>
-                    {{ form.mail }}
-
-                    <label for="password">Password</label>
-                    {{ form.password }}
-
-                    <label for="confirm_password">Confirm password</label>
-                    {{ form.confirm_password }}
-
-                    <!-- <input type="password" name="password" id="password" placeholder="Enter your password"> -->
-                    <!-- <input type="submit" value="Log In"> -->
+                    <label for="Pin">Pin</label>
+                    {{ form.pin }}
 
                     {{ form.submit }}
 
@@ -59,8 +51,9 @@
 
             <div class="form-footer">
                 <div>
-                    <span>Don't have an account?</span> <a href="">Sign Up</a>
+                    <span>Client ?</span> <a href="/login_client">Log in</a>
                 </div>
+
             </div><!-- FORM FOOTER -->
 
         </div><!-- FORM CONTAINER -->

@@ -10,3 +10,5 @@ https://python-web.teclado.com/section14/lectures/07_render_wtform_with_jinja_ma
 https://www.geeksforgeeks.org/flask-wtf-explained-how-to-use-it/
 types of fields : https://wtforms.readthedocs.io/en/2.3.x/fields/
 chrome shortcut html : Ctrl+Shift+C
+
+activate venv: source venv-flask/Scripts/activate 
