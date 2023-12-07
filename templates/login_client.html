@@ -35,7 +35,7 @@
                     </ul>
                 </div>            -->
 
-                <div class="_or">or</div>
+                <div class="_or"></div>
 
                 <form action="" class="the-form">
 
@@ -49,12 +49,14 @@
                     {{ form.account_number }}
 
                     <label for="Pin">Pin</label>
-                    {{ form.pin }}
+                    {{ form.password }}
 
                     <span for="Remember Me">{{ form.remember }} Remember me</span>
-                    
-
+                
                     {{ form.submit }}
+                    {% if form.errors %}
+{{ form.errors }}
+{% endif %}
 
                 </form>
 
