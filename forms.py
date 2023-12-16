@@ -1,7 +1,7 @@
 # Create a new file as forms.py
 from flask_wtf import FlaskForm
 import pandas as pd
-from wtforms import StringField, PasswordField, SubmitField, BooleanField, EmailField, IntegerField
+from wtforms import StringField, PasswordField, SubmitField, BooleanField, EmailField, FloatField
 from wtforms.validators import DataRequired, Length, Email, EqualTo
 
 
@@ -26,11 +26,18 @@ class LoginForm_employee(FlaskForm):
   pin = PasswordField('Pin', validators=[DataRequired()])
   submit = SubmitField('Login')
 
-class UserRegistrationHandler:
-  
 
-    @classmethod
-    def add_user(cls, first_name, last_name, mail, password, confirm_password, df):
-        if(password == confirm_password): 
-           new_user = df([[first_name, last_name, mail, password]], columns=['first_name', 'last_name', 'mail', 'password'])
-        df = df.append(new_user, ignore_index=True)
+class withdrawcurrent(FlaskForm):
+  amount_current = FloatField('Amount')
+  withdraw_current = SubmitField('Withdraw')
+
+class depositcurrent(FlaskForm):
+  deposit_current = SubmitField('Deposit')
+
+
+class withdrawsavings(FlaskForm):
+  amount_savings = FloatField('Amount')
+  withdraw_current = SubmitField('Withdraw')
+
+class depositsavings(FlaskForm):
+  deposit_savings = SubmitField('Deposit')

@@ -15,28 +15,50 @@
     </style>
 </head>
 <body>
+    <header>
+        <a href="/home">
+            <center><img src="static\img\dorsetwallet.png" alt="centered image" height="128" width="195"> </center>
+        </a>
+    </header>
 
-    <div class="main-container">
+    <div class="section">
+        <ul>
 
-        <div class="form-container">
+            <div class="account-info" id="current-account">
+                <h2>Current Account</h2>
+                <div class="balance" id="current-balance">Current: ${{ current }}</div>
+                <div class="transaction-input" method = "POST">
+                    <label for="current-amount">Enter amount:</label>
+                    <form action="" class="the-form" method="POST">
 
-            <div class="form-body">
-                <a href="/home">
-                    <center><img src="static\img\dorsetwallet.png" alt="centered image" height="128" width="195"> </center>
-                </a>
-
-            </div><!-- FORM BODY-->
-
-            <div class="form-footer">
-                <div>
-                    <span>Don't have an account?</span> <a href="/register">Register</a><br>
-                    <span>Bank employee ?</span> <a href="/login_employee">Log in</a>
+                        {{ withdraw_current.amount_current }}
+                        {{ deposit_current.deposit_current }}
+                        {{ withdraw_current.withdraw_current }}
+    
+                    </form>
+                    
                 </div>
+            </div>
 
-            </div><!-- FORM FOOTER -->
+            <li class="fb">
+                <div class="account-info" id="savings-account">
+                    <h2>Savings Account</h2>
+                    <div class="balance" id="savings-balance">Savings: ${{ savings }}</div>
+                    <div class="transaction-input" method = "POST">
+                        <label for="savings-amount">Enter amount:</label>
+                        <form action="" class="the-form" method="POST">
 
-        </div><!-- FORM CONTAINER -->
-    </div>
-
+                            {{ withdraw_savings.amount_savings }}
+                            {{ deposit_savings.deposit_savings }}
+                            {{ withdraw_savings.withdraw_savings }}
+        
+                        </form>
+                        
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>    
 </body>
+
 </html>
